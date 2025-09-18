@@ -3,9 +3,14 @@ import random
 print("✊ ✋ ✌️ Rock, Paper, Scissors!")
 choices = ["rock", "paper", "scissors"]
 
-player = input("👉 Your choice (rock/paper/scissors): ").lower()
-computer = random.choice(choices)
+while True:
+    player = input("👉 Your choice (rock/paper/scissors): ").lower()
+    if player in choices:
+        break
+    else:
+        print("🤨 Bruh… that’s not a valid move. Try again.")
 
+computer = random.choice(choices)
 print(f"Computer chose: {computer}")
 
 if player == computer:
